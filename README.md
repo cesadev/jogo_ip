@@ -55,7 +55,6 @@ O jogo mistura **TCG**, **roguelike deckbuilder** e **terror psicológico**, em 
 **Bosses:**
 - 🗡️ **Caboclo** — fura e elimina suas cartas
 - 🎭 **Papa-figo** — rouba suas criaturas
-- 👹 **Papangu** — inverte seus ataques em dano direto (uma vez a cada 3 rodadas)
 
 **Matinta Pereira** — Bruxa que oferece bênçãos para suas criaturas: asas, dano bifurcado ou imortalidade.
 
