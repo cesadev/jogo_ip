@@ -1,66 +1,112 @@
-# O Tabuleiro das Almas
+🃏 Ouro e Cachaça — O Tabuleiro das Almas
 
-Um roguelike deckbuilder baseado em Inscryption, mas com criaturas do folclore nordestino. Você joga contra o Matheus, um narrador que coleciona almas dos perdedores.
 
-## O Jogo
+Um roguelike deckbuilder de terror-psicológico inspirado em Inscryption, ambientado no folclore nordestino brasileiro.
 
-A premissa é simples: você começa em um bar jogando cartas contra o Matheus. Se ganhar, explora um mapa procurando novas criaturas. Se perder, sua alma vira parte de um cortejo fantasmagórico. Objetivo final: derrotar os três bosses e conseguir os totens do Saci.
 
-O jogo usa copos de shot como vida (você tem 2) e tampinhas de cerveja na balança para contar pontos. Cada criatura tem um custo em ouro e algumas têm efeitos especiais.
+Desenvolvido no Centro de Informática da Universidade Federal de Pernambuco (UFPE), como projeto da disciplina de Introdução à Programação.
 
-## Criaturas
 
-| Nome | Ataque | Vida | Custo | Efeito |
-|------|--------|------|-------|--------|
-| Acauã | 2 | 3 | 2 | Dano direto |
-| Anhangá | 3 | 7 | 4 | — |
-| Boitatá | 2 | 1 | 2 | Morte instantânea |
-| Caboclo D'água | 1 | 1 | 1 | Se esconde |
-| Cacto | 0 | 3 | 0 | — |
-| Capelobo | 1 | 2 | 1 | — |
-| Chupa Cabra | 1 | 1 | 1 | Dano de sangue |
-| Cobra Coral | 2 | 2 | 1 | Morte instantânea |
-| Cuca | 2 | 2 | 2 | Shell (escudo) |
-| Comadre Fulozinha | 1 | 1 | 2 | Dano em 3 direções |
-| Curupira | 3 | 2 | 2 | — |
-| La Ursa | 4 | 6 | 3 | — |
-| Leão-do-Norte | 7 | 7 | 4 | — |
-| Mula Sem-Cabeça | 3 | 4 | 3 | — |
-| Perna Cabeluda | 0 | 1 | 0 | Sacrifício |
-| Timbu | 2 | 2 | 1 | Dano de volta |
+📖 Sobre o jogo
 
-## Personagens
+Você se senta em um bar para jogar cartas contra o Matheus, um narrador que já perdeu a conta das almas que coleciona dos perdedores. Se vencer, explora o mapa em busca de novas criaturas. Se perder, sua alma passa a fazer parte de um cortejo fantasmagórico.
 
-**O Matheus**: Narrador que já perdeu a conta de almas. Você o encontra em um bar e joga com ele. Se perder, você vira parte de sua lenda.
+O jogo mistura TCG, roguelike deckbuilder e terror psicológico, em um formato Point & Click, com arte em Pixel Art e ilustrações inspiradas em xilogravura.
 
-**Bosses**:
-- Caboclo: Fura e elimina suas cartas
-- Papa-figo: Rouba suas criaturas
-- Papangu: Inverte seus ataques em dano direto (uma vez a cada 3 rodadas)
+Objetivo final: derrotar os três bosses e conquistar os totens do Saci.
 
-**Matinta Pereira**: Uma bruxa que oferece bênçãos pra suas criaturas—asas, dano bifurcado, ou imortalidade.
 
-**Cangaceiros**: Aparecem em uma fogueira e oferecem +1 de ataque ou vida pra uma de suas cartas.
+❤️ Vida: representada por dois copos de shot
+⚖️ Pontuação/dano: medidos por tampinhas de cerveja em uma balança
+💰 Cada criatura possui um custo em ouro para ser jogada
 
-## Itens
 
-- Peixeira: Corta a carta inimiga
-- Cantil: +1 de vida
-- Abridor de cerveja: Abre uma tampinha
-- Garrafa com carta: Uma Perna Cabeluda extra
 
-## Tecnicamente
+🃏 Criaturas
 
-- Resolução: 384x216
-- Cartas: 36x44 pixels (144x176 em zoom 4x)
-- Arte: Pixel art + xilogravura
-- Controle: Point & Click
+NomeAtaqueVidaCustoEfeitoAcauã232Dano diretoAnhangá374—Boitatá212Morte instantâneaCaboclo D'água111Se escondeCacto030—Capelobo121—Chupa Cabra111Dano de sangueCobra Coral221Morte instantâneaCuca222Shell (escudo)Comadre Fulozinha112Dano em 3 direçõesCurupira322—La Ursa463—Leão-do-Norte774—Mula Sem-Cabeça343—Perna Cabeluda010SacrifícioTimbu221Dano de volta
 
-## Status do Projeto
 
-- Bruno: Menu principal
-- Maria Luiza: Arte (xilogravura) e Matinta Pereira
-- Caio Cesar: Programação do combate
-- Vicente: Mapa e lore
-- João Lucas: Documentação
-- Matheus: Design de cartas, efeitos visuais, som, creditos e bosses 
+👥 Personagens
+
+O Matheus — Narrador que já perdeu a conta de almas. Você o encontra em um bar e joga com ele. Se perder, você vira parte de sua lenda.
+
+Bosses:
+
+
+🗡️ Caboclo — fura e elimina suas cartas
+🎭 Papa-figo — rouba suas criaturas
+👹 Papangu — inverte seus ataques em dano direto (uma vez a cada 3 rodadas)
+
+
+Matinta Pereira — Bruxa que oferece bênçãos para suas criaturas: asas, dano bifurcado ou imortalidade.
+
+Cangaceiros — Aparecem em uma fogueira e oferecem +1 de ataque ou vida para uma de suas cartas.
+
+
+🎒 Itens
+
+ItemEfeito🔪 PeixeiraCorta instantaneamente a carta inimiga🥃 CantilRecupera +1 de vida🍺 Abridor de cervejaAbre uma tampinha extra para a balança🍾 Garrafa com cartaLibera uma Perna Cabeluda extra
+
+
+🗺️ Mapas
+
+O jogo é dividido em três grandes áreas, cada uma com sua própria ambientação:
+
+
+Tutorial — batalhas introdutórias, coleta de cartas e itens
+Território do Caboclo — muda a temática visual e as ameaças do mapa
+Território do Papa-figo (véi do saco) — mapa final, com estilo visual mais aterrorizante
+
+
+Eventos especiais espalhados pelo mapa incluem paradas com Matinta Pereira (selos de melhoria) e fogueiras com Cangaceiros (apostas de fortalecimento de cartas).
+
+
+⚙️ Detalhes técnicos
+
+
+Resolução base: 384x216 (zoom 4x)
+Cartas: 36x44 px (144x176 em zoom 4x)
+Itens: sprites de 20x20 px
+Arte: Pixel Art + ilustrações inspiradas em xilogravura
+Controle: Point & Click
+
+
+Bibliotecas utilizadas
+
+BibliotecaUso no projetoPygameMotor gráfico: janela, renderização, FPS, input do jogador e hitboxes (pygame.Rect)randomRNG para embaralhar decks, sortear itens e definir cartas disponíveismathCálculos geométricos para animações suaves das cartasosGerenciamento de caminhos de arquivo multiplataforma (os.path.join)
+
+
+🧩 Mecânicas de carta
+
+Efeitos passivos e ativos implementados: Voar, Mergulhador, Sangue, Escudo, Morte Instantânea (Mortal), Ataque Triplo, Espinho (Dano de volta).
+
+
+👨‍💻 Equipe
+
+IntegranteResponsabilidadeBruno CordeiroMenu principal, sistema de colecionáveis, cartas do narrador e eventos de CangaceirosMaria LuizaArte geral, interfaces, polimento visual e eventos da Matinta PereiraCaio CésarOrganização do projeto, arquitetura de programação do combate e estatísticasVicenteMapas, lore/narrativa, trilha sonora e boss "Caboclo"João LucasDocumentação técnica e correção de bugsMatheus LuizDesign de cartas, efeitos visuais, som, créditos e boss "Papa-figo"
+
+
+🎓 Lições aprendidas
+
+
+Reduzir o escopo inicial (bastante ambicioso) foi essencial para viabilizar a entrega
+Divisão de tarefas precisa ser flexível — algumas funções naturalmente exigem mais tempo que outras
+Organização de arquivos desde o início evita retrabalho quando o projeto cresce em complexidade
+
+
+
+📌 Status do projeto
+
+
+ Sistema de combate (dano, sacrifício, balança)
+ Baralho de criaturas do folclore
+ Roteiro e diálogos do Narrador
+ Bosses Caboclo e Papa-figo
+ Eventos de mapa (Matinta Pereira, Cangaceiros, mochilas)
+ Itens consumíveis
+ Interface gráfica e resolução final
+
+
+
+Projeto acadêmico desenvolvido para a disciplina de Introdução à Programação — Centro de Informática, UFPE.
