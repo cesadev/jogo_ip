@@ -33,7 +33,7 @@ class CenaEscolhaCarta(CenaBase):
             Carta("Boitatá", 2, 1, imagens_cartas.get("boitata"), 2, 1),
             Carta("Caboclo D'água", 1, 1, imagens_cartas.get("caboclo"), 1, 1, selos=["mergulhador"]),
             Carta("Capelobo", 1, 2, imagens_cartas.get("capelobo"), 1, 1),
-            Carta("Chupa-Cabra", 1, 1, imagens_cartas.get("chupa-cabra"), 1, 3),
+            Carta("Chupa-Cabra", 1, 1, imagens_cartas.get("chupa-cabra"), 1, 3, selos=["sangue"]),
             Carta("Cobra Coral", 2, 2, imagens_cartas.get("cobra_coral"), 1, 1, selos=["mortal"]),
             Carta("Comadre Florzinha", 1, 1, imagens_cartas.get("comadre"), 2, 1, selos=["ataque_triplo"]),
             Carta("Cuca", 2, 2, imagens_cartas.get("cuca"), 2, 1, selos=["escudo"]),
