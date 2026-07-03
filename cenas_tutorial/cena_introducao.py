@@ -20,12 +20,9 @@ class CenaIntroducao(CenaBase):
             self.video = cv2.VideoCapture("cenarios/video tutorial.mp4")
             if self.video.isOpened():
                 self.fps_video = self.video.get(cv2.CAP_PROP_FPS)
-                total_frames = int(self.video.get(cv2.CAP_PROP_FRAME_COUNT))
-                print(f"✓ Vídeo de introdução carregado! ({total_frames} frames, {self.fps_video:.1f} FPS)")
             else:
                 raise Exception("Não conseguiu abrir o vídeo")
-        except Exception as e:
-            print(f"⚠ Não foi possível carregar vídeo de introdução: {e}")
+        except Exception:
             self.video = None
 
     

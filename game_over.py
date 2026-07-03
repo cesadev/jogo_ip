@@ -19,11 +19,9 @@ class CenaGameOver(CenaBase):
             self.video = cv2.VideoCapture("cenarios/gameover screen.mp4")
             if self.video.isOpened():
                 self.fps_video = self.video.get(cv2.CAP_PROP_FPS)
-                print("✓ Tela de game over carregada com sucesso!")
             else:
                 raise Exception("Não conseguiu abrir o vídeo")
-        except Exception as e:
-            print(f"⚠ Não foi possível carregar a tela de game over: {e}")
+        except Exception:
             self.video = None
             self.fundo = pygame.Surface(tela.get_size())
             self.fundo.fill((0, 0, 0))
