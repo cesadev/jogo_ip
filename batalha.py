@@ -245,20 +245,29 @@ class CenaCombate(CenaBase):
 
     def aplicar_efeito_item(self, nome_item):
         """Ativa o efeito do item consumível e atualiza a mensagem."""
-        if nome_item == "Peixeira":
+        item_para_remover = None
+        for item in self.itens_jogador:
+            nome_atual = item["nome"] if isinstance(item, dict) else item.nome
+            if nome_atual == nome_item:
+                item_para_remover = item
+                break
+        if item_para_remover is not None:
+            self.itens_jogador.remove(item_para_remover)
+
+        if nome_item == "peixeira":
             self.aguardando_alvo_peixeira = True
             self.mensagem_debug = "Peixeira pronta! Clique em uma carta inimiga para destruir."
             return  # item só é removido após escolher o alvo
 
-        elif nome_item == "Cantil":
+        elif nome_item == "cantil":
             self.vida_player += 1
             self.mensagem_debug = "Glup! +1 de vida."
 
-        elif nome_item == "Abridor de Cerveja":
+        elif nome_item == "abridor":
             self.peso_balanca += 5
             self.mensagem_debug = "Balança puxou 5 pontos!"
 
-        elif nome_item == "Garrafa com Perna":
+        elif nome_item == "garrafa":
             self.pernas_disponiveis += 1
             self.mensagem_debug = "Uma perna extra adicionada!"
 
