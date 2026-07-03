@@ -60,10 +60,6 @@ class CenaMapa(CenaBase):
 
     def desenhar(self):
         self.tela.blit(self.fundo, (0, 0))
-        opcoes_validas = self.nos_clicaveis[self.nodo_atual]["proximos"]
-        for no in self.nos_clicaveis:
-            cor = (0, 255, 0) if no["id"] in opcoes_validas else (255, 0, 0)
-            pygame.draw.rect(self.tela, cor, no["rect"], 3)
 
         rect_atual = self.nos_clicaveis[self.nodo_atual]["rect"]
         ponto_x = rect_atual.centerx
