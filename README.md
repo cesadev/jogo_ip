@@ -116,7 +116,7 @@ Efeitos passivos e ativos implementados: `Voar`, `Mergulhador`, `Sangue`, `Escud
 |---|---|
 | **Bruno Cordeiro** | Menu principal, sistema de colecionáveis, cartas do narrador e eventos de Cangaceiros |
 | **Maria Luiza** | Arte geral, interfaces, polimento visual e eventos da Matinta Pereira |
-| **Caio César** | Organização do projeto, arquitetura de programação do combate e estatísticas |
+| **Caio Cesar** | Organização do projeto, arquitetura de programação do combate e estatísticas |
 | **Vicente** | Mapas, lore/narrativa, trilha sonora e boss "Caboclo" |
 | **João Lucas** | Documentação técnica e correção de bugs |
 | **Matheus Luiz** | Design de cartas, efeitos visuais, som, créditos e boss "Papa-figo" |
