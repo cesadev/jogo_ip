@@ -89,8 +89,6 @@ class CenaEscolhaCarta(CenaBase):
                         # se a carta já estiver desvirada, o clique ESCOLHE ela
                         else:
                             self.carta_escolhida = self.cartas_na_mesa[i]
-                            print(f"O jogador comprou: {self.carta_escolhida.nome}")
-                            
                             self.dialogo_atual = "Alguns bichos do mato foram com a tua cara"
                             self.estado = "dialogo_final"
                         

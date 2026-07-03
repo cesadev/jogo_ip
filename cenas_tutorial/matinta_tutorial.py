@@ -205,11 +205,10 @@ class CenaMatinta(CenaBase):
 
     def transferir_selos(carta_sacrificada, carta_alvo):
         for nome_selo in carta_sacrificada.selos:
-            
+
             # Verifica se o selo existe no nosso dicionário de imagens
             if nome_selo in DICIONARIO_SELOS:
                 nome_arquivo_imagem = DICIONARIO_SELOS[nome_selo]
-                
+
                 # Chama a função que criamos no cartas.py para carimbar a carta alvo!
                 carta_alvo.adicionar_novo_selo(nome_selo, nome_arquivo_imagem)
-                print(f"Selo {nome_selo} transferido com sucesso!")

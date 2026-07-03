@@ -135,8 +135,8 @@ class CenaCombate(CenaBase):
             pygame.mixer.music.load(caminho)
             pygame.mixer.music.set_volume(0.6)
             pygame.mixer.music.play(-1)
-        except pygame.error as e:
-            print(f"AVISO de áudio: não foi possível carregar {caminho}: {e}")
+        except pygame.error:
+            pass
         
     def _carregar_intencoes_inimigas_do_turno(self, turno):
         """Varre o script do turno e adiciona spawns de objetos Carta na fila correspondente"""
@@ -892,7 +892,6 @@ if __name__ == "__main__":
         from cenas_caboclo.fases_caboclo import fases_do_jogo
         mock_dados_fase = fases_do_jogo["boss_1"]
     except ModuleNotFoundError:
-        print("fases.py não encontrado. Rodando em modo de segurança com dados locais.")
         mock_dados_fase = {
             "nome": "o lenhador brabo (Failsafe)",
             "obstaculos_iniciais": [{"slot": 2, "nome": "Cacto", "vida": 5, "dano": 0, "valor_sacrificio": 0}],

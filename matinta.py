@@ -147,8 +147,9 @@ class CenaMatinta(CenaBase):
                             
                             if nome_img:
                                 self.carta_beneficiada.adicionar_novo_selo(selo, nome_img)
-                        
+
                         self.deck.append(self.carta_beneficiada)
+                        self.carta_sacrificada = None
                         
                         self.estado = "dialogo_final"
                         self.dialogo_atual = "Matinta - Hehehe... um bom trato. A nova fera está pronta."
@@ -228,10 +229,9 @@ class CenaMatinta(CenaBase):
 
     def transferir_selos(self, carta_sacrificada, carta_alvo):
         for nome_selo in carta_sacrificada.selos:
-            
+
             if nome_selo in DICIONARIO_SELOS:
                 nome_arquivo_imagem = DICIONARIO_SELOS[nome_selo]
-                
+
                 #aqui tem que chamar a função cartas.py pra carimbar com o selo q a carta tem.
                 carta_alvo.adicionar_novo_selo(nome_selo, nome_arquivo_imagem)
-                print(f"Selo {nome_selo} transferido com sucesso!")
