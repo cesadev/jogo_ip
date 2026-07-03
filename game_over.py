@@ -31,7 +31,7 @@ class CenaGameOver(CenaBase):
         # Carrega a logo do canto inferior direito
         try:
             self.logo = pygame.image.load("cenarios/logo cdu disco de makita.png").convert_alpha()
-            self.logo = pygame.transform.scale(self.logo, (120, 120))
+            self.logo = pygame.transform.scale(self.logo, (100, 100))
         except FileNotFoundError:
             self.logo = None
 
@@ -86,7 +86,6 @@ class CenaGameOver(CenaBase):
         rect_pequeno = texto_pequeno.get_rect(center=(self.tela.get_width() // 2, self.tela.get_height() // 2 + 320))
         self.tela.blit(texto_pequeno, rect_pequeno)
 
-        # Desenha a logo no canto inferior direito
         if self.logo:
-            logo_rect = self.logo.get_rect(bottomright=(self.tela.get_width() - 40, self.tela.get_height() - 80))
+            logo_rect = self.logo.get_rect(bottomright=(self.tela.get_width() - 90, self.tela.get_height() - 80))
             self.tela.blit(self.logo, logo_rect)
