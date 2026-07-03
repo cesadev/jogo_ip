@@ -9,7 +9,7 @@ class CenaFogueira(CenaBase):
         self.proxima_depois = proxima_depois
         
         try:
-            img = pygame.image.load("cenarios/fundo_draft.png").convert()
+            img = pygame.image.load("cenarios/tela cangaceiro.png").convert()
             self.fundo = pygame.transform.scale(img, tela.get_size())
         except FileNotFoundError:
             self.fundo = pygame.Surface(tela.get_size())
