@@ -28,6 +28,13 @@ class CenaGameOver(CenaBase):
             self.fundo = pygame.Surface(tela.get_size())
             self.fundo.fill((0, 0, 0))
 
+        # Carrega a logo do canto inferior direito
+        try:
+            self.logo = pygame.image.load("cenarios/logo cdu disco de makita.png").convert_alpha()
+            self.logo = pygame.transform.scale(self.logo, (120, 120))
+        except FileNotFoundError:
+            self.logo = None
+
     def processar_eventos(self, eventos):
         for evento in eventos:
             if evento.type == pygame.QUIT:
@@ -78,3 +85,8 @@ class CenaGameOver(CenaBase):
         texto_pequeno = fonte_pequena.render("Clique ou pressione qualquer tecla para voltar ao menu", True, (255, 255, 255))
         rect_pequeno = texto_pequeno.get_rect(center=(self.tela.get_width() // 2, self.tela.get_height() // 2 + 320))
         self.tela.blit(texto_pequeno, rect_pequeno)
+
+        # Desenha a logo no canto inferior direito
+        if self.logo:
+            logo_rect = self.logo.get_rect(bottomright=(self.tela.get_width() - 40, self.tela.get_height() - 80))
+            self.tela.blit(self.logo, logo_rect)

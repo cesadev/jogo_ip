@@ -54,12 +54,19 @@ class Menu(CenaBase):
       self.video = None
       
       # Fallback para imagem
-      
+
       try:
         imagem_tela = pygame.image.load("cenarios/telaprincipal.png").convert()
         self.fundo = pygame.transform.scale(imagem_tela, tela.get_size())
       except FileNotFoundError:
         self.fundo = None
+
+    # Carrega a logo do canto inferior direito
+    try:
+      self.logo = pygame.image.load("cenarios/logo cdu disco de makita.png").convert_alpha()
+      self.logo = pygame.transform.scale(self.logo, (100, 100))
+    except FileNotFoundError:
+      self.logo = None
 
   def processar_eventos(self, eventos):
     posicaomouse = pygame.mouse.get_pos()
@@ -155,3 +162,8 @@ class Menu(CenaBase):
         texto = fonte(24).render(botao["texto"], True, (255, 255, 255))
         texto_rect = texto.get_rect(center=botao["pos"])
         self.tela.blit(texto, texto_rect)
+
+    # Desenha a logo acima da estrelinha do Gemini (canto inferior direito)
+    if self.logo:
+      logo_rect = self.logo.get_rect(bottomright=(self.tela.get_width() - 90, self.tela.get_height() - 80))
+      self.tela.blit(self.logo, logo_rect)
