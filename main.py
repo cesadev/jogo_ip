@@ -50,6 +50,12 @@ def efeito_transicao(tela, cena_nova):
         relogio.tick(60)
 
 
+def mudar_cena(nova_cena_obj):
+    """Helper pra transicionar entre cenas"""
+    efeito_transicao(tela, nova_cena_obj)
+    return nova_cena_obj
+
+
 def main():
     pygame.init()
     pygame.mixer.init()
@@ -278,8 +284,7 @@ def main():
             cena_atual = nova_cena
             proxima = None
 
-
-          #==============SEÇÃO DE EVENTOS =============
+        # ==== SEÇÃO DE EVENTOS ====
         elif proxima == "comprar_cartas_caboclo":
             nova_cena = CenaEscolhaCarta(
                 tela, imagens_versos, imagens_cartas, imagens_ui,
